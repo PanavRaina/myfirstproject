@@ -1,6 +1,10 @@
 const express = require('express')
 const port = 8000
 const app = express()
+
+// telling this file to use riuter -> index.js for routing
+app.use('/',require('./routes/index'))
+
 app.listen(port,function(error){
     if(error)
     {
